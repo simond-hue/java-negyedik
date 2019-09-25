@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.List;
 import java.io.FileReader;
 import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Emberek {
     private List<Ember> emberekLista;
@@ -61,6 +62,22 @@ public class Emberek {
             }
         }
         return nevek;
+    }
+    
+    public List<Integer> LegidosebbIndexek(){
+        List<Integer> indexek = new ArrayList();
+        int max = emberekLista.get(0).Eletkor();
+        for(Ember e : emberekLista){
+            if(e.Eletkor() > max){
+                max = e.Eletkor();
+            }
+        }
+        for(int i = 0; i < emberekLista.size(); i++){
+            if(emberekLista.get(i).Eletkor() == max){
+                indexek.add(i);
+            }
+        }
+        return indexek;
     }
     
     @Override
