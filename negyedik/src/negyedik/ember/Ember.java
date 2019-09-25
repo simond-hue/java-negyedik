@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package negyedik.ember;
 
-/**
- *
- * @author Diak
- */
 public class Ember {
-    
+    private String nev;
+    private String szuldatum;
+    private String szulhely;
+
+    public Ember(String nev, String szuldatum, String szulhely) {
+        this.nev = nev;
+        this.szuldatum = szuldatum;
+        this.szulhely = szulhely;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s [%s]",this.nev,this.szuldatum,this.szulhely);
+    }
 }

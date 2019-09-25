@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package negyedik;
 
-/**
- *
- * @author Diak
- */
+import negyedik.ember.Ember;
+
 public class Negyedik {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Ember simonDani = new Ember("Simon Dániel", "1999.04.13", "Budapest");
+        Ember palfalvi = new Ember("Pálfalvi László", "1995.02.11", "Budapest");
+        Ember jakus = new Ember("Jakus Dániel", "1997.10.05", "Budapest");
+        System.out.println(simonDani);
+        System.out.println(palfalvi);
+        System.out.println(jakus);
     }
-    
 }
