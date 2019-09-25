@@ -28,6 +28,41 @@ public class Emberek {
         }
     }
 
+    public int EmberekSzama(int honap){
+        int db = 0;
+        for(Ember e : emberekLista){
+            if(e.SzulHonap() == honap){
+                db++;
+            }
+        }
+        return db;
+    }
+    
+    public double EletkorAvg(){
+        double sum = 0;
+        int db = this.emberekLista.size();
+        for(Ember e : emberekLista){
+            sum += e.Eletkor();
+        }
+        return sum/db;
+    }
+    
+    public String Legfiatalabb(){
+        int min = emberekLista.get(0).Eletkor();
+        String nevek = "";
+        for(int i = 1; i < emberekLista.size(); i++){
+            if(emberekLista.get(i).Eletkor() < min){
+                min = emberekLista.get(i).Eletkor();
+            }
+        }
+        for(int i = 0; i < emberekLista.size(); i++){
+            if(emberekLista.get(i).Eletkor() == min){
+                nevek += emberekLista.get(i).getNev() + ", ";
+            }
+        }
+        return nevek;
+    }
+    
     @Override
     public String toString() {
         String s = "";

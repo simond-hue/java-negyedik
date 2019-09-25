@@ -14,6 +14,8 @@ public class Ember {
         this.szulhely = szulhely;
     }
 
+    public String getNev(){ return this.nev; }
+    
     public int SzuletesiEv(){
         return Integer.parseInt(this.szuldatum.substring(0,4));
     }
