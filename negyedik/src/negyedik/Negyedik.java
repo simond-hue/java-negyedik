@@ -13,7 +13,7 @@ public class Negyedik {
         System.out.println(emberek.Legfiatalabb());
         List<Integer> legidosebbEmberEletkorIndexek = emberek.LegidosebbIndexek();
         for(int i = 0; i < legidosebbEmberEletkorIndexek.size(); i++){
-            System.out.print(legidosebbEmberEletkorIndexek.get(i) + ", ");
+            System.out.print(legidosebbEmberEletkorIndexek.get(i) + ",");
         }
     }
 }
