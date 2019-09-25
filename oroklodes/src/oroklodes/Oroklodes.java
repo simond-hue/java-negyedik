@@ -7,7 +7,6 @@ public class Oroklodes {
     
     public static void main(String[] args) {
         Fajl f1 = new Fajl("recept", "txt");
-        System.out.println(f1);
         
         f1.AddAttributum(Attributum.archiv);
         f1.AddAttributum(Attributum.csakOlvashato);
